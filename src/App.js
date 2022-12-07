@@ -16,11 +16,14 @@ function App() {
   };
 
   const calcularResultado = () =>{
-    if (input){
-      setInput (evaluate(input))
-
-    }else{alert("Por favor igrese valores")}
-  }
+   try {
+      if (input){
+        setInput (evaluate(input))
+  
+      }else{alert("Por favor igrese valores")} 
+    } catch (error) {
+      alert("ingrese valores correctos")
+    }
 
   return (
     <div className="App">
